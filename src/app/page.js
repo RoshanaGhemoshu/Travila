@@ -8,7 +8,7 @@ export default function TravilaWebsite() {
   const [activeFilter, setActiveFilter] = useState('Tours');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  // ADD COUNTDOWN STATE AND EFFECT HERE
+  // COUNTDOWN STATE AND EFFECT 
   const [countdown, setCountdown] = useState({ days: 228, hours: 9, mins: 50, secs: 44 });
   
   useEffect(() => {
@@ -98,7 +98,7 @@ export default function TravilaWebsite() {
                   <span className="text-black font-bold">Travila</span>
                </div>
 
-                {/* Desktop Navigation - ADD hidden lg:flex */}
+                {/* Desktop Navigation  */}
                 <nav className="hidden lg:flex items-center space-x-8">
                  {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
@@ -111,7 +111,7 @@ export default function TravilaWebsite() {
                 ))}
               </nav>
 
-              {/* Desktop Right Actions - ADD hidden md:flex */}
+              {/* Desktop Right Actions */}
               <div className="hidden md:flex items-center space-x-4">
                 <button className="flex items-center text-black space-x-1 text-sm">
                   <Globe className="w-4 h-4" />
