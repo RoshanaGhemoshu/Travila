@@ -8,7 +8,7 @@ export default function TravilaWebsite() {
   const [activeFilter, setActiveFilter] = useState('Tours');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  // COUNTDOWN STATE AND EFFECT 
+  // ADD COUNTDOWN STATE AND EFFECT HERE
   const [countdown, setCountdown] = useState({ days: 228, hours: 9, mins: 50, secs: 44 });
   
   useEffect(() => {
@@ -98,7 +98,7 @@ export default function TravilaWebsite() {
                   <span className="text-black font-bold">Travila</span>
                </div>
 
-                {/* Desktop Navigation  */}
+                {/* Desktop Navigation - ADD hidden lg:flex */}
                 <nav className="hidden lg:flex items-center space-x-8">
                  {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
@@ -111,7 +111,7 @@ export default function TravilaWebsite() {
                 ))}
               </nav>
 
-              {/* Desktop Right Actions */}
+              {/* Desktop Right Actions - ADD hidden md:flex */}
               <div className="hidden md:flex items-center space-x-4">
                 <button className="flex items-center text-black space-x-1 text-sm">
                   <Globe className="w-4 h-4" />
@@ -178,76 +178,80 @@ export default function TravilaWebsite() {
           </div>
         </header>
 
-      {/* Search Section */}
-      <div className="bg-gray-50 py-8 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Search Bar */}
-          <div className="bg-white rounded-2xl shadow-sm p-6 mb-6">
-            <div className="flex items-center">
-              <div className="flex-1 flex items-center space-x-3 pr-6">
-                <Search className="w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="What are you looking for?"
-                  className="flex-1 outline-none text-gray-700 text-base"
-                />
-              </div>
-              <div className="flex items-center space-x-3">
-                {filterButtons.map((filter) => (
-                  <button
-                    key={filter}
-                    onClick={() => setActiveFilter(filter)}
-                    className={`px-6 py-2.5 rounded-full text-sm font-medium transition ${
-                      activeFilter === filter
-                        ? 'bg-black text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                    }`}
-                  >
-                    {filter}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Filters */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              {['Categories', 'Duration', 'Review / Rating', 'Price range', 'Language'].map((filter) => (
-                <button
-                  key={filter}
-                  className="px-5 py-2.5 bg-white rounded-xl text-sm font-medium text-gray-700 flex items-center space-x-2 hover:bg-gray-50 border border-gray-200"
-                >
-                  <span>{filter}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              ))}
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <span>Sort from High to Low</span>
-              <ChevronDown className="w-4 h-4" />
-            </div>
-          </div>
+   {/* Search Section */}
+<div className="bg-gray-50 py-8 border-b">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Search Bar */}
+    <div className="bg-white rounded-2xl shadow-sm p-4 sm:p-6 mb-6">
+      <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="flex-1 flex items-center space-x-3 w-full">
+          <Search className="w-5 h-5 text-gray-400 shrink-0" />
+          <input
+            type="text"
+            placeholder="What are you looking for?"
+            className="flex-1 outline-none text-gray-700 text-base"
+          />
+        </div>
+        <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 hide-scrollbar">
+          {filterButtons.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium transition whitespace-nowrap shrink-0 ${
+                activeFilter === filter
+                  ? 'bg-black text-white'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
         </div>
       </div>
+    </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Hero Title */}
-        <div className="mb-12 flex items-start justify-between">
-          <div>
-            <h1 className="text-6xl text-black font-bold mb-3 leading-tight">Your Journey, Your Way</h1>
-            <p className="text-black text-xl">Discover the World's Treasures with Travila</p>
-          </div>
-          <div className="flex space-x-3 mt-4">
-            <button className="w-12 h-12 rounded-full bg-black hover:bg-gray-200 flex items-center justify-center transition border border-gray-200">
-              <span className="text-xl">←</span>
-            </button>
-            <button className="w-12 h-12 rounded-full bg-black hover:bg-gray-200 flex items-center justify-center transition border border-gray-200">
-              <span className="text-xl">→</span>
-            </button>
-          </div>
-        </div>
+    {/* Filters */}
+    <div className="flex items-center justify-between gap-4">
+      <div className="flex items-center gap-3 overflow-x-auto pb-2 sm:pb-0 hide-scrollbar flex-1">
+        {['Categories', 'Duration', 'Review / Rating', 'Price range', 'Language'].map((filter) => (
+          <button
+            key={filter}
+            className="px-4 sm:px-5 py-2.5 bg-white rounded-xl text-sm font-medium text-gray-700 flex items-center space-x-2 hover:bg-gray-50 border border-gray-200 whitespace-nowrap shrink-0"
+          >
+            <span>{filter}</span>
+            <ChevronDown className="w-4 h-4" />
+          </button>
+        ))}
+      </div>
+      <div className="hidden lg:flex items-center space-x-2 text-sm text-gray-600 whitespace-nowrap">
+        <span>Sort from High to Low</span>
+        <ChevronDown className="w-4 h-4" />
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Main Content */}
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+  {/* Hero Title */}
+  <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4">
+    <div>
+      <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight">
+        Your Journey, Your Way
+      </h1>
+      <p className="text-black text-base sm:text-lg lg:text-xl">
+        Discover the World's Treasures with Travila
+      </p>
+    </div>
+    <div className="flex space-x-3">
+      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
+        <span className="text-lg sm:text-xl text-white">←</span>
+      </button>
+      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
+        <span className="text-lg sm:text-xl text-white">→</span>
+      </button>
+    </div>
+  </div>
 
         {/* Tours Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
