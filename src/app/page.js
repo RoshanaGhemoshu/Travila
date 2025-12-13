@@ -86,21 +86,21 @@ export default function TravilaWebsite() {
         </div>
       </div>
 
-        {/* Header */}
+{/* Header */}
         <header className="bg-white border-b sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-20">
+            <div className="flex items-center h-20">
               {/* Logo */}
-                <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🌴</span>
-                  </div>
-                  <span className="text-black font-bold">Travila</span>
-               </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🌴</span>
+                </div>
+                <span className="text-black font-bold">Travila</span>
+              </div>
 
-                {/* Desktop Navigation - ADD hidden lg:flex */}
-                <nav className="hidden lg:flex items-center space-x-8">
-                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center space-x-8 ml-12">
+                {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
                     className="text-sm font-medium text-gray-700 hover:text-black flex items-center space-x-1"
@@ -111,8 +111,8 @@ export default function TravilaWebsite() {
                 ))}
               </nav>
 
-              {/* Desktop Right Actions - ADD hidden md:flex */}
-              <div className="hidden md:flex items-center space-x-4">
+              {/* Desktop Right Actions */}
+              <div className="hidden md:flex items-center space-x-4 ml-12">
                 <button className="flex items-center text-black space-x-1 text-sm">
                   <Globe className="w-4 h-4" />
                   <span>EN</span>
@@ -132,25 +132,25 @@ export default function TravilaWebsite() {
               </div>
 
               {/* Mobile Menu Button*/}
-                <button 
-                  className="md:hidden p-2 text-black"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  aria-label="Toggle menu"
-                  aria-expanded={isMenuOpen}
-                >
-                  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
-             </div>
+              <button 
+                className="md:hidden p-2 text-black ml-auto"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+                aria-expanded={isMenuOpen}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
 
-             {/* Mobile Menu Dropdown */}
-             {isMenuOpen && (
+            {/* Mobile Menu Dropdown */}
+            {isMenuOpen && (
               <div className="lg:hidden py-4 border-t space-y-2">
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
                     className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-                   >
+                  >
                     {item}
                   </button>
                 ))}
@@ -165,8 +165,8 @@ export default function TravilaWebsite() {
                     <span>USD</span>
                   </button>
                   <button className="flex items-center text-black space-x-2 w-full py-2">
-                   <Sun className="w-5 h-5" />
-                   <span>Theme</span>
+                    <Sun className="w-5 h-5" />
+                    <span>Theme</span>
                   </button>
                   <button className="w-full text-left font-semibold text-black py-2">Signin</button>
                   <button className="w-full bg-yellow-400 hover:bg-yellow-500 p-2.5 rounded-lg transition flex items-center justify-center">
@@ -177,7 +177,6 @@ export default function TravilaWebsite() {
             )}
           </div>
         </header>
-
    {/* Search Section */}
 <div className="bg-gray-50 py-8 border-b">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -244,16 +243,16 @@ export default function TravilaWebsite() {
       </p>
     </div>
     <div className="flex space-x-3">
-      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
-        <span className="text-lg sm:text-xl text-white">←</span>
+      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
+        <span className="text-lg sm:text-xl text-black">🡠</span>
       </button>
-      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
-        <span className="text-lg sm:text-xl text-white">→</span>
+      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
+        <span className="text-lg sm:text-xl text-black">🡢</span>
       </button>
     </div>
   </div>
 
-        {/* Tours Grid */}
+{/* Tours Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {tours.map((tour) => (
             <div key={tour.id} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
@@ -275,12 +274,18 @@ export default function TravilaWebsite() {
                 )}
                 <div className="absolute bottom-4 right-4 bg-white px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-md">
                   <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  <span className="text-sm font-bold">{tour.rating.toFixed(2)}</span>
+                  <span className="text-sm font-bold text-black">{tour.rating.toFixed(2)}</span>
+                  {tour.reviews > 0 && (
+                    <>
+                      <span className="text-gray-400">·</span>
+                      <span className="text-xs text-gray-500">({tour.reviews} reviews)</span>
+                    </>
+                  )}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col">
                 <h3 className="font-bold text-black text-lg mb-3 line-clamp-2 leading-snug">{tour.title}</h3>
                 <div className="flex items-center text-sm text-gray-500 mb-4">
                   <span>{tour.duration}</span>
@@ -288,50 +293,231 @@ export default function TravilaWebsite() {
                   <span>{tour.groupSize}</span>
                 </div>
 
-                {/* Countdown Timer */}
-                {tour.promotion && (
-                  <div className="mb-5 pb-5 border-b border-gray-100">
-                    <p className="text-xs text-black mb-3">Promotion will end in</p>
-                    <div className="grid grid-cols-4 gap-2">
-                      <div className="text-center">
-                        <div className="text-2xl text-black font-bold">{countdown.days}</div>
-                        <div className="text-xs text-black mt-0.5">Days</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl text-black font-bold">{countdown.hours}</div>
-                        <div className="text-xs text-black mt-0.5">Hours</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl text-black font-bold">{countdown.mins}</div>
-                        <div className="text-xs text-black mt-0.5">Mins</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl text-black font-bold">{countdown.secs}</div>
-                        <div className="text-xs text-black mt-0.5">Secs</div>
+                {/* Price Section */}
+                <div className="mb-auto">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-2xl text-black font-bold">${tour.price.toFixed(2)}</span>
+                    <span className="text-gray-600 text-sm">/ person</span>
+                  </div>
+                </div>
+
+                {/* Countdown Timer*/}
+                {tour.promotion ? (
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <p className="text-xs text-gray-600 mb-2 text-right">Promotion will end in</p>
+                    <div className="flex justify-end">
+                      <div className="grid grid-cols-4 gap-1.5">
+                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
+                          <div className="text-lg text-black font-bold leading-tight">{countdown.days}</div>
+                          <div className="text-[10px] text-gray-600 mt-0.5">Days</div>
+                        </div>
+                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
+                          <div className="text-lg text-black font-bold leading-tight">{countdown.hours}</div>
+                          <div className="text-[10px] text-gray-600 mt-0.5">Hours</div>
+                        </div>
+                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
+                          <div className="text-lg text-black font-bold leading-tight">{countdown.mins}</div>
+                          <div className="text-[10px] text-gray-600 mt-0.5">Mins</div>
+                        </div>
+                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
+                          <div className="text-lg text-black font-bold leading-tight">{countdown.secs}</div>
+                          <div className="text-[10px] text-gray-600 mt-0.5">Secs</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                )}
-
-                {/* Price and CTA */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-2xl text-black font-bold">${tour.price.toFixed(2)}</span>
-                    <span className="text-black text-sm"> / person</span>
-                  </div>
-                  {!tour.promotion && (
-                    <button className="px-5 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition">
+                ) : (
+                  <div className="mt-4 flex justify-end">
+                    <button className="px-5 py-2.5 bg-gray-300 text-black text-sm font-semibold rounded-lg hover:bg-gray-500 transition">
                       Book Now
                     </button>
-                  )}
-                </div>
-
-                {tour.reviews > 0 && (
-                  <p className="text-xs text-black mt-2">({tour.reviews} reviews)</p>
+                  </div>
                 )}
               </div>
             </div>
           ))}
+        </div>
+      </div>
+       {/* Popular Destinations Section */}
+      <div className="bg-white py-20 border-t">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start justify-between mb-12">
+            <div>
+              <h2 className="text-5xl text-black font-bold mb-3">Popular Destinations</h2>
+              <p className="text-gray-800 text-lg">Favorite destinations based on customer reviews</p>
+            </div>
+            <div className="flex items-center space-x-3 mt-4">
+              {['Categories', 'Duration', 'Review / Rating', 'Price range'].map((filter) => (
+                <button
+                  key={filter}
+                  className="px-5 py-2.5 bg-gray-100 rounded-xl text-sm font-medium text-gray-700 flex items-center space-x-2 hover:bg-gray-200 transition"
+                >
+                  <span>{filter}</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Destinations Grid */}
+          <div className="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            {[
+              { name: 'Venice', tours: 356, activities: 248, image: '/images/venice.jpeg' },
+              { name: 'Amsterdam', tours: 555, activities: 248, image: '/images/amsterdam.jpeg' },
+              { name: 'Budapest', tours: 150, activities: 248, image: '/images/bupaset.jpeg' },
+              { name: 'Lisbon', tours: 159, activities: 248, image: '/images/lisbon.jpeg' }
+            ].map((dest, idx) => (
+              <div key={idx} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition group cursor-pointer">
+                <div className="h-32 bg-gray-100 rounded-xl mb-4">
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                     className="object-cover w-full h-full"
+                 />
+                </div>
+                <h3 className="font-bold text-xl mb-2">{dest.name}</h3>
+                <p className="text-sm text-gray-500 mb-3">{dest.tours} Tours, {dest.activities} Activities</p>
+                <button className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition">
+                  →
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'London', tours: 356, activities: 248, image: '/images/london.jpeg' },
+              { name: 'Ottawa', tours: 555, activities: 248, image: '/images/ottawa.jpeg' },
+              { name: 'Paris', tours: 150, activities: 248, image: '/images/paris.jpeg' }
+            ].map((dest, idx) => (
+              <div key={idx} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition group cursor-pointer">
+                <div className="h-32 bg-gray-100 rounded-xl mb-4">
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                     className="object-cover w-full h-full"
+                  />
+                </div>
+                <h3 className="font-bold text-xl mb-2">{dest.name}</h3>
+                <p className="text-sm text-gray-500 mb-3">{dest.tours} Tours, {dest.activities} Activities</p>
+                <button className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition">
+                  →
+                </button>
+              </div>
+            ))}
+            {/* CTA Card */}
+            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6 flex flex-col justify-center items-start">
+              <h3 className="font-bold text-black text-xl mb-2">Crafting Your Perfect Travel Experience</h3>
+              <button className="mt-4 bg-black text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-gray-800 transition flex items-center space-x-2">
+                <span>Browse All destinations</span>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Top Rated Hotels Section */}
+      <div className="bg-orange-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start justify-between mb-12">
+            <div>
+              <h2 className="text-5xl text-black font-bold mb-3">Top Rated Hotels</h2>
+              <p className="text-gray-800 text-lg">Quality as judged by customers. Book at the ideal price!</p>
+            </div>
+            <button className="mt-4 bg-black text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-gray-800 transition flex items-center space-x-2">
+              <span>View More</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          {/* Hotels Grid */}
+          <div className="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'California Sunset/Twilight Boat Cruise',
+                image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
+                location: 'Manchester, England',
+                rating: 4.96,
+                reviews: 672,
+                price: 48.25,
+                stars: 5
+              },
+              {
+                title: 'NYC: Food Tastings and Culture Tour',
+                image: 'https://images.unsplash.com/photo-1541849546-216549ae216d?w=800&h=600&fit=crop',
+                location: 'Manchester, England',
+                rating: 4.96,
+                reviews: 672,
+                price: 17.32,
+                stars: 5
+              },
+              {
+                title: 'Grand Canyon Horseshoe Bend 2 days',
+                image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop',
+                location: 'Manchester, England',
+                rating: 4.96,
+                reviews: 672,
+                price: 15.63,
+                stars: 5
+              },
+              {
+                title: 'California Sunset/Twilight Boat Cruise',
+                image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
+                location: 'Manchester, England',
+                rating: 4.96,
+                reviews: 672,
+                price: 48.25,
+                stars: 5
+              }
+            ].map((hotel, idx) => (
+              <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={hotel.image}
+                    alt={hotel.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  />
+                  <button className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition">
+                    <Heart className="w-5 h-5 text-gray-700" />
+                  </button>
+                  <div className="absolute bottom-4 right-4 bg-white px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-md">
+                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <span className="text-sm font-bold">{hotel.rating}</span>
+                    <span className="text-xs text-gray-500">({hotel.reviews} reviews)</span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h3 className="font-bold text-lg mb-2 line-clamp-2">{hotel.title}</h3>
+                  <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <span>📍</span>
+                    <span className="ml-1">{hotel.location}</span>
+                  </div>
+                  
+                  {/* Star Rating */}
+                  <div className="flex items-center mb-4">
+                    {[...Array(hotel.stars)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-black text-black" />
+                    ))}
+                  </div>
+
+                  {/* Price and CTA */}
+                  <div className="flex items-center justify-between pt-4 border-t">
+                    <div>
+                      <span className="text-2xl font-bold">${hotel.price}</span>
+                      <span className="text-gray-500 text-sm"> / person</span>
+                    </div>
+                    <button className="px-5 py-2.5 bg-gray-300 text-black text-sm font-semibold rounded-lg hover:bg-gray-500 transition">
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -387,59 +573,102 @@ export default function TravilaWebsite() {
       </div>
 
       {/* Flight Offer Deals Section */}
-      <div className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h2 className="text-4xl text-black font-bold mb-2">Flight Offer Deals</h2>
-              <p className="text-black">Competitive fares for your route-specific searches</p>
-            </div>
-            <div className="flex space-x-2">
-              <button className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-black">
-                ←
-              </button>
-              <button className="w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-black">
-                →
-              </button>
-            </div>
+<div className="bg-gray-50 py-20">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between mb-12">
+      <div>
+        <h2 className="text-4xl text-black font-bold mb-2">Flight Offer Deals</h2>
+        <p className="text-gray-500">Competitive fares for your route-specific searches.</p>
+      </div>
+      <div className="flex space-x-2">
+        <button className="w-10 h-10 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button className="w-10 h-10 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    {/* Flight Cards Grid - 2x2 Layout with Horizontal Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {[
+        { image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=600&q=80" },
+        { image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" },
+        { image: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=600&q=80" },
+        { image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80" }
+      ].map((deal, idx) => (
+        <div key={idx} className="bg-white rounded-3xl shadow-sm overflow-hidden flex h-54 w-110">
+          {/* Image with Heart - Left Side */}
+          <div className="relative w-50 flex-shrink-0">
+            <img src={deal.image} alt="Destination" className="w-full h-full object-cover" />
+            <button className="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
+              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
           </div>
 
-          {/* Flight Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[...Array(4)].map((_, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
-                <button className="mb-4">
-                  <Heart className="w-5 h-5 text-gray-400" />
-                </button>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-center flex-1">
-                    <p className="text-xs text-black mb-1">📅 09 Jan 2021</p>
-                    <p className="font-bold text-black">Denmark</p>
-                    <p className="text-sm text-black">Business</p>
-                  </div>
-                  <div className="mx-4">
-                    <div className="text-black">✈️</div>
-                  </div>
-                  <div className="text-center flex-1">
-                    <p className="text-xs text-black mb-1">⏰ 12 Jul 2021</p>
-                    <p className="font-bold text-black">New York</p>
-                    <p className="text-sm text-black">Economy</p>
-                  </div>
+          {/* Card Content - Right Side */}
+          <div className="p-3 flex-1 flex flex-col justify-between">
+            {/* Flight Route */}
+            <div className="flex items-start justify-between mb-3">
+              <div className="flex-1">
+                <div className="flex items-center gap-1 text-xs text-gray-500 mb-1">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>09 Jun 2024</span>
                 </div>
-                <div className="flex items-center justify-between pt-4 border-t">
-                  <div>
-                    <p className="text-2xl text-black font-bold">$288.15</p>
-                    <p className="text-xs text-black">12 hours left</p>
-                  </div>
-                  <button className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-800">
-                    Book Now
-                  </button>
-                </div>
+                <p className="font-bold text-black text-sm">Denmark</p>
+                <p className="text-xs text-gray-500">Business</p>
               </div>
-            ))}
+              
+              <div className="mx-2 mt-3">
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              
+              <div className="flex-1 text-right">
+                <div className="flex items-center justify-end gap-1 text-xs text-gray-500 mb-1">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>16 Jun 2024</span>
+                </div>
+                <p className="font-bold text-black text-sm">New York</p>
+                <p className="text-xs text-gray-500">Business</p>
+              </div>
+            </div>
+
+         {/* Price Section */}
+<div className="flex items-end justify-between mb-2">
+  <div>
+    <p className="text-xl text-black font-bold">$288.15</p>
+  </div>
+  <div>
+    <p className="text-xl text-black font-bold">$288.15</p>
+  </div>
+</div>
+
+            {/* Seats and Book Button */}
+            <div className="flex items-center justify-between">
+              <p className="text-xs text-gray-500">18 Seats left</p>
+              <button className="px-4 py-2 bg-white border border-gray-900 text-black rounded-lg text-xs font-semibold hover:bg-gray-900 hover:text-white transition-colors">
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* Adventure Banners Section */}
       <div className="bg-white py-20">
@@ -787,188 +1016,7 @@ export default function TravilaWebsite() {
         </div>
       </div>
 
-      {/* Popular Destinations Section */}
-      <div className="bg-white py-20 border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start justify-between mb-12">
-            <div>
-              <h2 className="text-5xl text-black font-bold mb-3">Popular Destinations</h2>
-              <p className="text-gray-800 text-lg">Favorite destinations based on customer reviews</p>
-            </div>
-            <div className="flex items-center space-x-3 mt-4">
-              {['Categories', 'Duration', 'Review / Rating', 'Price range'].map((filter) => (
-                <button
-                  key={filter}
-                  className="px-5 py-2.5 bg-gray-100 rounded-xl text-sm font-medium text-gray-700 flex items-center space-x-2 hover:bg-gray-200 transition"
-                >
-                  <span>{filter}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Destinations Grid */}
-          <div className="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {[
-              { name: 'Venice', tours: 356, activities: 248, image: '/images/venice.jpeg' },
-              { name: 'Amsterdam', tours: 555, activities: 248, image: '/images/amsterdam.jpeg' },
-              { name: 'Budapest', tours: 150, activities: 248, image: '/images/bupaset.jpeg' },
-              { name: 'Lisbon', tours: 159, activities: 248, image: '/images/lisbon.jpeg' }
-            ].map((dest, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition group cursor-pointer">
-                <div className="h-32 bg-gray-100 rounded-xl mb-4">
-                  <img
-                    src={dest.image}
-                    alt={dest.name}
-                     className="object-cover w-full h-full"
-                 />
-                </div>
-                <h3 className="font-bold text-xl mb-2">{dest.name}</h3>
-                <p className="text-sm text-gray-500 mb-3">{dest.tours} Tours, {dest.activities} Activities</p>
-                <button className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition">
-                  →
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: 'London', tours: 356, activities: 248, image: '/images/london.jpeg' },
-              { name: 'Ottawa', tours: 555, activities: 248, image: '/images/ottawa.jpeg' },
-              { name: 'Paris', tours: 150, activities: 248, image: '/images/paris.jpeg' }
-            ].map((dest, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition group cursor-pointer">
-                <div className="h-32 bg-gray-100 rounded-xl mb-4">
-                  <img
-                    src={dest.image}
-                    alt={dest.name}
-                     className="object-cover w-full h-full"
-                  />
-                </div>
-                <h3 className="font-bold text-xl mb-2">{dest.name}</h3>
-                <p className="text-sm text-gray-500 mb-3">{dest.tours} Tours, {dest.activities} Activities</p>
-                <button className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition">
-                  →
-                </button>
-              </div>
-            ))}
-            {/* CTA Card */}
-            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6 flex flex-col justify-center items-start">
-              <h3 className="font-bold text-black text-xl mb-2">Crafting Your Perfect Travel Experience</h3>
-              <button className="mt-4 bg-black text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-gray-800 transition flex items-center space-x-2">
-                <span>Browse All destinations</span>
-                <span>→</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Top Rated Hotels Section */}
-      <div className="bg-orange-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start justify-between mb-12">
-            <div>
-              <h2 className="text-5xl text-black font-bold mb-3">Top Rated Hotels</h2>
-              <p className="text-gray-800 text-lg">Quality as judged by customers. Book at the ideal price!</p>
-            </div>
-            <button className="mt-4 bg-black text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-gray-800 transition flex items-center space-x-2">
-              <span>View More</span>
-              <span>→</span>
-            </button>
-          </div>
-
-          {/* Hotels Grid */}
-          <div className="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: 'California Sunset/Twilight Boat Cruise',
-                image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
-                location: 'Manchester, England',
-                rating: 4.96,
-                reviews: 672,
-                price: 48.25,
-                stars: 5
-              },
-              {
-                title: 'NYC: Food Tastings and Culture Tour',
-                image: 'https://images.unsplash.com/photo-1541849546-216549ae216d?w=800&h=600&fit=crop',
-                location: 'Manchester, England',
-                rating: 4.96,
-                reviews: 672,
-                price: 17.32,
-                stars: 5
-              },
-              {
-                title: 'Grand Canyon Horseshoe Bend 2 days',
-                image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop',
-                location: 'Manchester, England',
-                rating: 4.96,
-                reviews: 672,
-                price: 15.63,
-                stars: 5
-              },
-              {
-                title: 'California Sunset/Twilight Boat Cruise',
-                image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
-                location: 'Manchester, England',
-                rating: 4.96,
-                reviews: 672,
-                price: 48.25,
-                stars: 5
-              }
-            ].map((hotel, idx) => (
-              <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
-                {/* Image */}
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={hotel.image}
-                    alt={hotel.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                  />
-                  <button className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition">
-                    <Heart className="w-5 h-5 text-gray-700" />
-                  </button>
-                  <div className="absolute bottom-4 left-4 bg-white px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-md">
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    <span className="text-sm font-bold">{hotel.rating}</span>
-                    <span className="text-xs text-gray-500">({hotel.reviews} reviews)</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5">
-                  <h3 className="font-bold text-lg mb-2 line-clamp-2">{hotel.title}</h3>
-                  <div className="flex items-center text-sm text-gray-500 mb-3">
-                    <span>📍</span>
-                    <span className="ml-1">{hotel.location}</span>
-                  </div>
-                  
-                  {/* Star Rating */}
-                  <div className="flex items-center mb-4">
-                    {[...Array(hotel.stars)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-black text-black" />
-                    ))}
-                  </div>
-
-                  {/* Price and CTA */}
-                  <div className="flex items-center justify-between pt-4 border-t">
-                    <div>
-                      <span className="text-2xl font-bold">${hotel.price}</span>
-                      <span className="text-gray-500 text-sm"> / person</span>
-                    </div>
-                    <button className="px-5 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition">
-                      Book Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+     
 
       
       {/* Footer */}
