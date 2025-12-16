@@ -76,7 +76,7 @@ export default function TravilaWebsite() {
     <div className="min-h-screen bg-white">
       {/* Top Banner */}
       <div className="bg-black text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-2 text-sm">
+        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-2 text-xs">
           <Sparkles className="w-4 h-4" />
           <span>Unlock the Magic of Travel with Travila - Your Gateway to Extraordinary Experiences</span>
           <button className="ml-4 text-yellow-400 hover:underline flex items-center space-x-1">
@@ -88,22 +88,26 @@ export default function TravilaWebsite() {
 
 {/* Header */}
         <header className="bg-white border-b sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="flex items-center h-20">
-              {/* Logo */}
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🌴</span>
-                </div>
-                <span className="text-black font-bold">Travila</span>
-              </div>
+             {/* Logo */}
+<div className="flex items-center space-x-2">
+  <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+    <img 
+      src="/images/tree.png" 
+      alt="Travila Logo" 
+      className="w-9 h-10 object-contain"
+    />
+  </div>
+  <span className="text-black font-bold">Travila</span>
+</div>
 
               {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-8 ml-12">
+              <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
-                    className="text-sm font-medium text-gray-700 hover:text-black flex items-center space-x-1"
+                    className="text-xs font-medium text-gray-700 hover:text-black flex items-center space-x-1"
                   >
                     <span>{item}</span>
                     {item !== 'Contact' && <ChevronDown className="w-3 h-3" />}
@@ -111,25 +115,43 @@ export default function TravilaWebsite() {
                 ))}
               </nav>
 
-              {/* Desktop Right Actions */}
-              <div className="hidden md:flex items-center space-x-4 ml-12">
-                <button className="flex items-center text-black space-x-1 text-sm">
-                  <Globe className="w-4 h-4" />
-                  <span>EN</span>
-                  <ChevronDown className="w-3 h-3" />
-                </button>
-                <button className="flex items-center text-black space-x-1 text-sm">
-                  <span>USD</span>
-                  <ChevronDown className="w-3 h-3" />
-                </button>
-                <button className="p-2 hover:bg-gray-100 text-black rounded-lg">
-                  <Sun className="w-5 h-5" />
-                </button>
-                <button className="text-sm font-semibold text-black hover:text-gray-700">Signin</button>
-                <button className="bg-yellow-400 hover:bg-yellow-500 p-2.5 rounded-lg transition">
-                  <Grid className="w-5 h-5" />
-                </button>
-              </div>
+             <div className="hidden md:flex items-center space-x-3 ml-auto pr-0">
+  <button className="flex items-center text-black space-x-1 text-xs px-3 py-2 rounded-lg transition">
+    <Globe className="w-5 h-5" />
+    <span>EN</span>
+    <ChevronDown className="w-3 h-3" />
+  </button>
+  <button className="flex items-center text-black space-x-1 text-xs px-3 py-2 rounded-lg transition">
+    <span>USD</span>
+    <ChevronDown className="w-3 h-3" />
+  </button>
+<button className="px-3 py-2 bg-gray-100 hover:bg-gray-100 text-black rounded-full border border-gray-300 hover:border-gray-400">
+  <Sun className="w-5 h-5" />
+</button>
+  <button className="text-s font-semibold text-black hover:text-gray-700 border border-gray-300 px-6 py-2 rounded-full hover:border-gray-400">
+    Signin
+  </button>
+  <button className="bg-yellow-200 hover:bg-yellow-200 p-2.5 rounded-lg transition">
+    <svg 
+      width="20" 
+      height="20" 
+      viewBox="0 0 20 20" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-5 h-5"
+    >
+      <rect x="2" y="2" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="8" y="2" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="14" y="2" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="2" y="8" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="8" y="8" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="14" y="8" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="2" y="14" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="8" y="14" width="3" height="3" rx="0.5" fill="black"/>
+      <rect x="14" y="14" width="3" height="3" rx="0.5" fill="black"/>
+    </svg>
+  </button>
+</div>
 
               {/* Mobile Menu Button*/}
               <button 
@@ -177,45 +199,53 @@ export default function TravilaWebsite() {
             )}
           </div>
         </header>
-   {/* Search Section */}
+{/* Search Section */}
 <div className="bg-gray-50 py-8 border-b">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {/* Search Bar */}
-    <div className="bg-white rounded-2xl shadow-sm p-4 sm:p-6 mb-6">
-      <div className="flex flex-col sm:flex-row items-center gap-4">
-        <div className="flex-1 flex items-center space-x-3 w-full">
-          <Search className="w-5 h-5 text-gray-400 shrink-0" />
-          <input
-            type="text"
-            placeholder="What are you looking for?"
-            className="flex-1 outline-none text-gray-700 text-base"
-          />
-        </div>
-        <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 hide-scrollbar">
-          {filterButtons.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium transition whitespace-nowrap shrink-0 ${
-                activeFilter === filter
-                  ? 'bg-black text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
+    {/* Search Bar with Integrated Buttons */}
+    <div className="bg-white rounded-full shadow-sm flex items-stretch mb-6 overflow-hidden">
+      {/* Search Input - Gray Background - Takes more space */}
+      <div className="flex-[2] flex items-center gap-3 bg-gray-200 px-6">
+        <Search className="w-5 h-5 text-gray-400 shrink-0" />
+        <input
+          type="text"
+          placeholder="What are you looking for?"
+          className="flex-1 outline-none text-gray-900 text-bold text-base bg-transparent py-4"
+        />
+      </div>
+      
+      {/* Filter Buttons - White Background */}
+      <div className="flex items-center gap-2 px-4 bg-white">
+        {filterButtons.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`px-6 py-2.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              activeFilter === filter
+                ? 'bg-black text-white'
+                : 'bg-transparent text-gray-700 hover:bg-gray-50'
+            }`}
+          >
+            {filter === 'Hotels' ? (
+              <div className="flex flex-col items-center leading-tight">
+                <span className="text-sm">Hot</span>
+                <span className="text-sm">els</span>
+              </div>
+            ) : (
+              <span>{filter}</span>
+            )}
+          </button>
+        ))}
       </div>
     </div>
 
-    {/* Filters */}
+    {/* Filters Row */}
     <div className="flex items-center justify-between gap-4">
       <div className="flex items-center gap-3 overflow-x-auto pb-2 sm:pb-0 hide-scrollbar flex-1">
         {['Categories', 'Duration', 'Review / Rating', 'Price range', 'Language'].map((filter) => (
           <button
             key={filter}
-            className="px-4 sm:px-5 py-2.5 bg-white rounded-xl text-sm font-medium text-gray-700 flex items-center space-x-2 hover:bg-gray-50 border border-gray-200 whitespace-nowrap shrink-0"
+            className="px-5 py-2.5 bg-gray-300 rounded-full text-sm font-medium text-gray-700 flex items-center space-x-2 border border-gray-200 whitespace-nowrap shrink-0"
           >
             <span>{filter}</span>
             <ChevronDown className="w-4 h-4" />
@@ -229,115 +259,105 @@ export default function TravilaWebsite() {
     </div>
   </div>
 </div>
-
 {/* Main Content */}
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+<div className="w-full px-4 sm:px-6 lg:px-8">
   {/* Hero Title */}
   <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4">
-    <div>
-      <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight">
-        Your Journey, Your Way
-      </h1>
-      <p className="text-black text-base sm:text-lg lg:text-xl">
-        Discover the World's Treasures with Travila
-      </p>
-    </div>
-    <div className="flex space-x-3">
-      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
-        <span className="text-lg sm:text-xl text-black">🡠</span>
-      </button>
-      <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
-        <span className="text-lg sm:text-xl text-black">🡢</span>
-      </button>
-    </div>
+  <div className="pl-30">
+    <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight">
+      Your Journey, Your Way
+    </h1>
+    <p className="text-gray-500 text-base sm:text-lg lg:text-xl">
+      Discover the World's Treasures with Travila
+    </p>
+  </div>
+<div className="flex space-x-3 relative right-30 mt-16">
+  <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
+    <span className="text-lg sm:text-xl text-black">🡠</span>
+  </button>
+  <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 hover:bg-gray-700 flex items-center justify-center transition border border-gray-200">
+    <span className="text-lg sm:text-xl text-black">🡢</span>
+  </button>
+</div>
   </div>
 
 {/* Tours Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tours.map((tour) => (
-            <div key={tour.id} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
-              {/* Image */}
-              <div className="relative h-72 overflow-hidden">
-                <img
-                  src={tour.image}
-                  alt={tour.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                />
-                <button className="absolute top-4 right-4 w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition">
-                  <Heart className="w-5 h-5 text-gray-700" />
-                </button>
-                {tour.badge && (
-                  <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-4 py-1.5 rounded-full text-xs font-bold flex items-center space-x-1">
-                    <span>⚡</span>
-                    <span>{tour.badge}</span>
-                  </div>
-                )}
-                <div className="absolute bottom-4 right-4 bg-white px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-md">
-                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  <span className="text-sm font-bold text-black">{tour.rating.toFixed(2)}</span>
-                  {tour.reviews > 0 && (
-                    <>
-                      <span className="text-gray-400">·</span>
-                      <span className="text-xs text-gray-500">({tour.reviews} reviews)</span>
-                    </>
-                  )}
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 flex flex-col">
-                <h3 className="font-bold text-black text-lg mb-3 line-clamp-2 leading-snug">{tour.title}</h3>
-                <div className="flex items-center text-sm text-gray-500 mb-4">
-                  <span>{tour.duration}</span>
-                  <span className="mx-2">·</span>
-                  <span>{tour.groupSize}</span>
-                </div>
-
-                {/* Price Section */}
-                <div className="mb-auto">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-2xl text-black font-bold">${tour.price.toFixed(2)}</span>
-                    <span className="text-gray-600 text-sm">/ person</span>
-                  </div>
-                </div>
-
-                {/* Countdown Timer*/}
-                {tour.promotion ? (
-                  <div className="mt-4 pt-4 border-t border-gray-200">
-                    <p className="text-xs text-gray-600 mb-2 text-right">Promotion will end in</p>
-                    <div className="flex justify-end">
-                      <div className="grid grid-cols-4 gap-1.5">
-                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
-                          <div className="text-lg text-black font-bold leading-tight">{countdown.days}</div>
-                          <div className="text-[10px] text-gray-600 mt-0.5">Days</div>
-                        </div>
-                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
-                          <div className="text-lg text-black font-bold leading-tight">{countdown.hours}</div>
-                          <div className="text-[10px] text-gray-600 mt-0.5">Hours</div>
-                        </div>
-                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
-                          <div className="text-lg text-black font-bold leading-tight">{countdown.mins}</div>
-                          <div className="text-[10px] text-gray-600 mt-0.5">Mins</div>
-                        </div>
-                        <div className="bg-gray-100 rounded-lg p-1.5 text-center min-w-[45px]">
-                          <div className="text-lg text-black font-bold leading-tight">{countdown.secs}</div>
-                          <div className="text-[10px] text-gray-600 mt-0.5">Secs</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="mt-4 flex justify-end">
-                    <button className="px-5 py-2.5 bg-gray-300 text-black text-sm font-semibold rounded-lg hover:bg-gray-500 transition">
-                      Book Now
-                    </button>
-                  </div>
-                )}
-              </div>
+<div className="w-full">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {tours.map((tour) => (
+      <div key={tour.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+        <div className="relative h-64 overflow-hidden">
+          <img
+            src={tour.image}
+            alt={tour.title}
+            className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+          />
+          <button className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition">
+            <Heart className="w-5 h-5 text-gray-700" />
+          </button>
+          {tour.badge && (
+            <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-md text-xs font-bold flex items-center space-x-1">
+              <span>⚡</span>
+              <span>{tour.badge}</span>
             </div>
-          ))}
+          )}
+          <div className="absolute bottom-4 right-4 bg-white px-3 py-1 rounded-md flex items-center space-x-1 shadow-md">
+            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            <span className="text-sm font-bold text-black">{tour.rating}</span>
+            {tour.reviews > 0 && (
+              <span className="text-xs text-gray-500">({tour.reviews} reviews)</span>
+            )}
+          </div>
+        </div>
+
+<div className="p-5">
+  <h3 className="font-bold text-black text-lg mb-2 line-clamp-2 leading-snug">{tour.title}</h3>
+  <div className="flex items-center text-sm text-gray-500 mb-4">
+    <span>{tour.duration}</span>
+    <span className="mx-2">·</span>
+    <span>{tour.groupSize}</span>
+  </div>
+  
+  <div className="flex items-center justify-between gap-4">
+    <div className="flex items-baseline gap-1 whitespace-nowrap">
+      <span className="text-2xl text-black font-bold">${tour.price}</span>
+      <span className="text-gray-500 text-sm">/ person</span>
+    </div>
+    
+    {tour.promotion ? (
+      <div className="shrink-0">
+        <p className="text-xs text-gray-500 mb-1 text-left">Promotion will end in</p>
+        <div className="flex items-start gap-1.5">
+          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+            <div className="text-base text-black font-bold leading-tight">{countdown.days}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Days</div>
+          </div>
+          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+            <div className="text-base text-black font-bold leading-tight">{countdown.hours}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Hours</div>
+          </div>
+          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+            <div className="text-base text-black font-bold leading-tight">{countdown.mins}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Mins</div>
+          </div>
+          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+            <div className="text-base text-black font-bold leading-tight">{countdown.secs}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Secs</div>
+          </div>
         </div>
       </div>
+    ) : (
+      <button className="px-6 py-2 bg-gray-200 text-black text-sm font-semibold rounded-lg hover:bg-gray-300 transition flex-shrink-0">
+        Book Now
+      </button>
+    )}
+  </div>
+</div>
+      </div>
+    ))}
+  </div>
+</div>
+</div>
        {/* Popular Destinations Section */}
       <div className="bg-white py-20 border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -350,7 +370,7 @@ export default function TravilaWebsite() {
               {['Categories', 'Duration', 'Review / Rating', 'Price range'].map((filter) => (
                 <button
                   key={filter}
-                  className="px-5 py-2.5 bg-gray-100 rounded-xl text-sm font-medium text-gray-700 flex items-center space-x-2 hover:bg-gray-200 transition"
+                  className="px-5 py-2.5 bg-gray-300 rounded-xl text-sm font-medium text-gray-700 flex items-center space-x-2 hover:bg-gray-200 transition"
                 >
                   <span>{filter}</span>
                   <ChevronDown className="w-4 h-4" />
@@ -671,78 +691,77 @@ export default function TravilaWebsite() {
 </div>
 
       {/* Adventure Banners Section */}
-      <div className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Banner 1 */}
-            <div className="relative h-80 rounded-3xl overflow-hidden group">
-              <img 
-                src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop" 
-                alt="Camping" 
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl font-bold mb-3">Waking up in a far away place</h3>
-                <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
-                  View More →
-                </button>
-              </div>
-            </div>
-
-            {/* Banner 2 */}
-            <div className="relative h-80 rounded-3xl overflow-hidden group">
-              <img 
-                src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=600&fit=crop" 
-                alt="Beach" 
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-sm mb-2">Explore the World</p>
-                <h3 className="text-2xl font-bold mb-3">The adventure starts today</h3>
-                <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
-                  View More →
-                </button>
-              </div>
-            </div>
-
-            {/* Banner 3 */}
-            <div className="relative h-80 rounded-3xl overflow-hidden group">
-              <img 
-                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop" 
-                alt="Nature" 
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-sm mb-2">Discover Vacations</p>
-                <h3 className="text-2xl font-bold mb-3">Start your adventure Now</h3>
-                <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
-                  View More →
-                </button>
-              </div>
-            </div>
-
-            {/* Banner 4 */}
-            <div className="relative h-80 rounded-3xl overflow-hidden group">
-              <img 
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=600&fit=crop" 
-                alt="Mountain" 
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl font-bold mb-3">Waking up in a far away place</h3>
-                <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
-                  View More →
-                </button>
-              </div>
-            </div>
-          </div>
+<div className="bg-white py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Banner 1 */}
+      <div className="relative h-80 rounded-3xl overflow-hidden group">
+        <img 
+          src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop" 
+          alt="Camping" 
+          className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div className="absolute bottom-6 left-6 text-white">
+          <h3 className="text-2xl font-bold mb-3">Waking up in a far away place</h3>
+          <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
+            View More →
+          </button>
         </div>
       </div>
 
+      {/* Banner 2 */}
+      <div className="relative h-80 rounded-3xl overflow-hidden group">
+        <img 
+          src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=600&fit=crop" 
+          alt="Beach" 
+          className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div className="absolute bottom-6 left-6 text-white">
+          <p className="text-sm mb-2">Explore the World</p>
+          <h3 className="text-2xl font-bold mb-3">The adventure starts today</h3>
+          <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
+            View More →
+          </button>
+        </div>
+      </div>
+
+      {/* Banner 3 */}
+      <div className="relative h-80 rounded-3xl overflow-hidden group">
+        <img 
+          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop" 
+          alt="Nature" 
+          className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div className="absolute bottom-6 left-6 text-white">
+          <p className="text-sm mb-2">Discover Vacations</p>
+          <h3 className="text-2xl font-bold mb-3">Start your adventure Now</h3>
+          <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
+            View More →
+          </button>
+        </div>
+      </div>
+
+      {/* Banner 4 */}
+      <div className="relative h-80 rounded-3xl overflow-hidden group">
+        <img 
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=600&fit=crop" 
+          alt="Mountain" 
+          className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div className="absolute bottom-6 left-6 text-white">
+          <h3 className="text-2xl font-bold mb-3">Waking up in a far away place</h3>
+          <button className="bg-yellow-400 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-500 transition">
+            View More →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       {/* Discover Dream Destinations Section */}
       <div className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -791,234 +810,285 @@ export default function TravilaWebsite() {
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="bg-blue-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-white rounded-full border-2 border-black overflow-hidden">
+{/* Testimonials Section */}
+<div className="bg-blue-50 py-20 relative overflow-hidden">
+  {/* Decorative Dashed Line at Top */}
+  <div className="absolute top-0 left-1/4 w-96 h-32">
+    <svg className="w-full h-full" viewBox="0 0 400 150">
+      <path 
+        d="M 50,100 Q 100,50 150,80 Q 200,110 250,70 Q 300,30 350,60" 
+        fill="none" 
+        stroke="black" 
+        strokeWidth="2" 
+        strokeDasharray="8,8"
+      />
+    </svg>
+  </div>
+
+  {/* Decorative Dashed Line (Original) */}
+  <div className="absolute top-10 right-1/3 w-64 h-24">
+    <svg className="w-full h-full" viewBox="0 0 300 100">
+      <path 
+        d="M 0,50 Q 50,10 100,50 T 200,50 Q 250,70 300,40" 
+        fill="none" 
+        stroke="black" 
+        strokeWidth="2" 
+        strokeDasharray="6,6"
+      />
+    </svg>
+  </div>
+
+  <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+      {/* Left Column - Text Content (Takes 2 columns) */}
+      <div className="lg:col-span-2 pl-30">
+        {/* Client Avatars */}
+        <div className="flex items-center space-x-3 mb-6">
+          <div className="flex items-center">
+            <div className="w-10 h-10 bg-white rounded-full border-2 border-white shadow-sm overflow-hidden">
+              <img
+                src="/images/client1.jpeg"
+                alt="Client 1"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="w-10 h-10 bg-white rounded-full border-2 border-white shadow-sm -ml-2 overflow-hidden">
+              <img
+                src="/images/client2.jpeg"
+                alt="Client 2"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="w-10 h-10 bg-white rounded-full border-2 border-white shadow-sm -ml-2 overflow-hidden">
+              <img
+                src="/images/client3.jpeg"
+                alt="Client 3"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          <span className="text-sm font-semibold text-black">+100 testimonials</span>
+        </div>
+
+        <h2 className="text-5xl text-black font-bold mb-4 leading-tight">
+          What our clients are saying about us?
+        </h2>
+        <p className="text-gray-600 text-base leading-relaxed max-w-lg">
+          Discover how you can offset your adventure's carbon emissions and support the sustainable initiatives practised by our operators worldwide.
+        </p>
+      </div>
+
+      {/* Right Column - Testimonial Cards Side by Side (Takes 3 columns) */}
+      <div className="lg:col-span-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          {/* Card 1 */}
+          <div className="bg-white rounded-3xl p-6 shadow-md">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-12 h-12 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
                 <img
-                  src="/images/client1.jpeg"
-                  alt="Client 1"
+                  src="/images/client2.jpeg"
+                  alt="Sara Mohamed"
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="w-10 h-10 bg-white rounded-full border-2 border-black -ml-3 overflow-hidden">
-                  <img
-                  src="/images/client2.jpeg"
-                  alt="Client 2"
+              <div className="flex-1">
+                <h4 className="font-bold text-black text-base">Sara Mohamed</h4>
+                <p className="text-xs text-gray-500">Jakarta</p>
+              </div>
+              <div className="flex items-center space-x-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              I've been using the hotel booking system for several years now, and it's become my go-to platform for planning my trips. The interface is user-friendly, and I appreciate the detailed information and real-time availability of hotels.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white rounded-3xl p-6 shadow-md">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-12 h-12 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                <img
+                  src="/images/client1.jpeg"
+                  alt="Atend John"
                   className="object-cover w-full h-full"
-                  />
+                />
               </div>
-              <div className="w-10 h-10 bg-white rounded-full border-2 border-black -ml-3 overflow-hidden">
-                  <img
-                    src="/images/client3.jpeg"
-                    alt="Client 3"
-                    className="object-cover w-full h-full"
-                    />
+              <div className="flex-1">
+                <h4 className="font-bold text-black text-base">Atend John</h4>
+                <p className="text-xs text-gray-500">Califonia</p>
+              </div>
+              <div className="flex items-center space-x-0.5">
+                {[...Array(4)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
             </div>
-              <span className="text-sm font-semibold text-black">+100 thousands</span>
-            </div>
-          </div>
-
-          <h2 className="text-5xl text-black font-bold mb-4 max-w-xl">What our clients are saying about us?</h2>
-          <p className="text-black text-lg mb-12 max-w-2xl">
-            Discover how you can offset your adventure's carbon emissions and support the sustainable initiatives practised by our operators worldwide.
-          </p>
-
-          {/* Testimonial Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white rounded-3xl p-8 shadow-sm">
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full">
-                    <img
-                      src="/images/client2.jpeg"
-                      alt="Mary Morehouse"
-                      className="object-cover w-full h-full"
-                   />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black">Mary Morehouse</h4>
-                    <p className="text-sm text-gray-500">Happy Customer</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-black leading-relaxed">
-                I was sold the minute I heard the description from my mom (who is always right) which led to planning a trip. My husband and I booked our honeymoon to Maldives through TripRex (highly recommend) and the flight was wonderful.
-              </p>
-            </div>
-
-            <div className="bg-white  rounded-3xl p-8 shadow-sm">
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full">
-                    <img
-                      src="/images/client1.jpeg"
-                      alt="Renee John"
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black">Renee John</h4>
-                    <p className="text-sm text-gray-500">Happy Customer</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                I booked the cheapest economy Air France ticket I found but at the cheapest price. If I'm equally able to make my purchase from website thanks to your kind assistance. Thanks for providing info about the flight.
-              </p>
-            </div>
-          </div>
-
-          {/* Navigation Dots */}
-          <div className="flex items-center justify-center space-x-2">
-            <button className="w-2 h-2 rounded-full bg-gray-400"></button>
-            <button className="w-2 h-2 rounded-full bg-black"></button>
-            <button className="w-2 h-2 rounded-full bg-gray-400"></button>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              I had a last-minute business trip, and the hotel booking system came in the rescue. I was able to find a high-quality hotel in no time and even got a great deal on the room. The confirmation process was straightforward, and I received all the necessary information promptly.
+            </p>
           </div>
         </div>
+
+        {/* Navigation Arrows */}
+        <div className="flex items-center justify-center space-x-3">
+          <button className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition">
+            <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition">
+            <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+     {/* News, Tips & Guides Section */}
+<div className="bg-white py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between mb-12 pl-30">
+      <div>
+        <h2 className="text-5xl text-black font-bold mb-2">News, Tips & Guides</h2>
+        <p className="text-gray-400">Favorite destinations based on customer reviews</p>
+      </div>
+      <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-800 transition flex items-center gap-2 mr-30">
+        <span>View More</span>
+        <span>→</span>
+      </button>
+    </div>
+
+{/* Blog Cards */}
+<div className="grid grid-cols-1 text-black md:grid-cols-3 gap-3 pl-30 mr-30">
+  {[
+    {
+      category: 'Cultural',
+      date: '18 Sep 2024',
+      readTime: '6 mins',
+      comments: '38 comments',
+      title: 'Ultimate Travel Planning Guide: 10 Tips for a Seamless Journey',
+      author: 'Jimmy Dave',
+      type: 'Keep Reading',
+      image: '/images/culture.jpeg'
+    },
+    {
+      category: 'Travel',
+      date: '18 Sep 2024',
+      readTime: '6 mins',
+      comments: '38 comments',
+      title: 'Top 10 Travel Hacks for Budget-Conscious Adventurers',
+      author: 'Jimmy Dave',
+      type: 'Keep Reading',
+      image: '/images/travel.jpeg'
+    },
+    {
+      category: 'Discovery',
+      date: '18 Sep 2024',
+      readTime: '6 mins',
+      comments: '38 comments',
+      title: 'Discovering Hidden Gems: 10 Off-the-Beaten-Path Travel Tips',
+      author: 'Jimmy Dave',
+      type: 'Keep Reading',
+      image: '/images/discover.jpeg'
+    }
+  ].map((post, idx) => (
+    <div key={idx} className="bg-white rounded-3xl shadow-sm overflow-hidden hover:shadow-xl transition group">
+      {/* Image */}
+      <div className="relative h-48 bg-gray-100 overflow-hidden">
+        <img
+          src={post.image}
+          alt={post.category}
+          className="object-cover w-full h-full group-hover:scale-110 transition duration-500"
+        />
+        
+        {/* Category Badge - Top Left */}
+        <div className="absolute top-3 left-3 bg-white px-3 py-1 rounded-full shadow-md">
+          <span className="text-xs font-semibold text-black">{post.category}</span>
+        </div>
+        
+        {/* Heart Icon - Top Right */}
+        <button className="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition">
+          <Heart className="w-4 h-4 text-gray-700" />
+        </button>
       </div>
 
-      {/* News, Tips & Guides Section */}
-      <div className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h2 className="text-4xl text-black font-bold mb-2">News, Tips & Guides</h2>
-              <p className="text-black">Find the destination content to help customers</p>
+      {/* Content */}
+      <div className="p-4">
+        {/* Meta Info */}
+        <div className="flex items-center space-x-1.5 mb-3 text-xs text-gray-500">
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span>{post.date}</span>
+          <span className="text-gray-300">•</span>
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>{post.readTime}</span>
+          <span className="text-gray-300">•</span>
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+          </svg>
+          <span>{post.comments}</span>
+        </div>
+        
+        <h3 className="font-bold text-base mb-4 leading-tight line-clamp-2 group-hover:text-blue-600 transition">
+          {post.title}
+        </h3>
+
+        {/* Footer */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-7 h-7 bg-gray-300 rounded-full overflow-hidden">
+              <img
+                src="/images/client4.jpeg"
+                alt={post.author}
+                className="object-cover w-full h-full"
+              />
             </div>
-            <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-800 transition">
-              View More →
-            </button>
+            <span className="text-xs font-semibold text-black">{post.author}</span>
           </div>
-
-          {/* Blog Cards */}
-          <div className="grid grid-cols-1 text-black md:grid-cols-3 gap-8">
-            {[
-              {
-                category: 'Cultural',
-                tag: 'Travel tips',
-                date: 'Nov 23, 2024',
-                comments: '315 comments',
-                title: 'Ultimate 4-step Travel Planning Guide: How to plan a Business Journey',
-                author: 'James Silva',
-                type: 'Keep Reading',
-                image: '/images/culture.jpeg'
-              },
-              {
-                category: 'Travel',
-                tag: 'Travel tips',
-                date: 'mar 12, 2023',
-                comments: '535 comments',
-                title: 'Top 10 Tour places to Budget-friendly destinations in Asia',
-                author: 'James Silva',
-                type: 'Keep Reading',
-                image: '/images/travel.jpeg'
-              },
-              {
-                category: 'Discovery',
-                tag: 'Travel tips',
-                date: 'april 26, 2022',
-                comments: '395 comments',
-                title: 'Discovering Hidden Gems: WCOF - the Eccentric Tech Towns Of the Southwest',
-                author: 'James Silva',
-                type: 'Keep Reading',
-                image: '/images/discover.jpeg'
-              }
-            ].map((post, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition group">
-                {/* Image Placeholder 1*/}
-                <div className="relative h-56 bg-gray-100 overflow-hidden">
-                  <div className="absolute inset-0">
-                   <img
-                     src={post.image}
-                     alt={post.category}
-                      className="object-cover w-full h-full"
-                   /> 
-                  </div>
-                  <button className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
-                    <Heart className="w-5 h-5 text-gray-700" />
-                  </button>
-                </div>
-                
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <span className="text-sm font-semibold text-gray-700">{post.category}</span>
-                    <span className="text-gray-300">•</span>
-                    <span className="text-sm text-gray-500">{post.tag}</span>
-                    <span className="text-gray-300">•</span>
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                    <span className="text-gray-300">•</span>
-                    <span className="text-sm text-gray-500">{post.comments}</span>
-                  </div>
-                  
-                  <h3 className="font-bold text-lg mb-6 leading-snug line-clamp-2 group-hover:text-blue-600 transition">
-                    {post.title}
-                  </h3>
-
-                  <div className="flex items-center justify-between pt-4 border-t">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 bg-gray-300 rounded-full">
-                        <img
-                        src="/images/client4.jpeg"
-                        alt="James Silva"
-                        className="object-cover w-full h-full"
-                      />
-                      </div>
-                      <span className="text-sm font-semibold">{post.author}</span>
-                    </div>
-                    <button className="text-sm font-semibold text-gray-700 hover:text-black">
-                      {post.type} →
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <button className="text-xs font-semibold text-black hover:text-blue-600 transition">
+            {post.type}
+          </button>
         </div>
       </div>
-
-      {/* Newsletter Section */}
-      <div className="bg-blue-100 py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-bold mb-6">
-            Join our newsletter!
-          </div>
-          <h2 className="text-4xl text-black font-bold mb-4">
-            Subscribe to see secret deals prices drop the moment you sign up!
-          </h2>
-          <div className="flex items-center justify-center space-x-3 mt-8 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="flex-1 px-6 py-4 rounded-full border-0 outline-none text-gray-700"
-            />
-            <button className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-gray-600 mt-4">No ads. No trails. No commitments</p>
+    </div>
+  ))}
+</div>
+</div>
+</div>
+{/* Newsletter Section */}
+<div className="bg-white py-20">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-blue-100 rounded-3xl p-16">
+      <div className="max-w-xl">
+        <div className="inline-block bg-yellow-300 text-black px-5 py-2 rounded-full text-sm font-bold mb-6">
+          Join our newsletter
         </div>
+        <h2 className="text-3xl text-black font-bold mb-8 leading-snug">
+          Subscribe to see secret deals prices drop the moment you sign up!
+        </h2>
+        <div className="flex items-center space-x-3 mb-4">
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="flex-1 px-6 py-3 rounded-full border-0 outline-none text-gray-400 bg-white text-sm"
+          />
+          <button className="bg-black text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-gray-800 transition whitespace-nowrap">
+            Subscribe
+          </button>
+        </div>
+        <p className="text-xs text-gray-400">No ads. No trails. No commitments</p>
       </div>
-
-     
-
-      
+    </div>
+  </div>
+</div>
       {/* Footer */}
       <Footer />
     </div>
