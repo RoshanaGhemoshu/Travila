@@ -74,23 +74,25 @@ export default function TravilaWebsite() {
   
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Banner */}
+{/* Top Banner */}
       <div className="bg-black text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-2 text-xs">
+        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-2">
           <Sparkles className="w-4 h-4" />
-          <span>Unlock the Magic of Travel with Travila - Your Gateway to Extraordinary Experiences</span>
-          <button className="ml-4 text-yellow-400 hover:underline flex items-center space-x-1">
+          <span className="text-[14px] leading-[22px] tracking-[0%]" style={{font: 'Manrope'}}>
+            Unlock the Magic of Travel with Travila - Your Gateway to Extraordinary Experiences
+          </span>
+          <button className="ml-4 flex items-center space-x-1 text-[14px] font-normal leading-[24px] tracking-[0%]" style={{font: 'Manrope', color: '#F09814'}}>
             <span>Get This Now</span>
-            <span>→</span>
+            <span className="text-white mt-0.5">🡢</span>
           </button>
         </div>
       </div>
 
 {/* Header */}
-        <header className="bg-white border-b sticky top-0 z-50">
-          <div className="w-full px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center h-20">
-             {/* Logo */}
+        <header className="bg-white border-b sticky top-0 z-50 shadow-md">
+          <div className="w-full px-4 sm:px-6 lg:px-4">
+            <div className="flex items-center h-15">
+            {/* Logo */}
 <div className="flex items-center space-x-2">
   <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
     <img 
@@ -101,33 +103,33 @@ export default function TravilaWebsite() {
   </div>
   <span className="text-black font-bold">Travila</span>
 </div>
-
-              {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
+{/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1">
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
-                    className="text-xs font-medium text-gray-700 hover:text-black flex items-center space-x-1"
+                    className="text-xs font-medium text-black hover:text-black flex items-center gap-1"
                   >
                     <span>{item}</span>
-                    {item !== 'Contact' && <ChevronDown className="w-3 h-3" />}
+                    {item !== 'Contact' && <ChevronDown className="w-3 h-3 mt-0.5" />}
                   </button>
                 ))}
               </nav>
-
-             <div className="hidden md:flex items-center space-x-3 ml-auto pr-0">
-  <button className="flex items-center text-black space-x-1 text-xs px-3 py-2 rounded-lg transition">
-    <Globe className="w-5 h-5" />
-    <span>EN</span>
-    <ChevronDown className="w-3 h-3" />
+             <div className="hidden md:flex items-center space-x-3 ml-auto pl-20">
+  <div className="flex items-center -space-x-3">
+    <button className="flex items-center text-black text-xs px-3 py-2 rounded-lg transition">
+      <Globe className="w-5 h-5" />
+      <span>EN</span>
+      <ChevronDown className="w-3 h-3" />
+    </button>
+    <button className="flex items-center text-black text-xs px-3 py-2 rounded-lg transition">
+      <span>USD</span>
+      <ChevronDown className="w-3 h-3" />
+    </button>
+  </div>
+  <button className="px-3 py-2 bg-gray-100 hover:bg-gray-100 text-black rounded-full border border-gray-300 hover:border-gray-400">
+    <Sun className="w-5 h-5" />
   </button>
-  <button className="flex items-center text-black space-x-1 text-xs px-3 py-2 rounded-lg transition">
-    <span>USD</span>
-    <ChevronDown className="w-3 h-3" />
-  </button>
-<button className="px-3 py-2 bg-gray-100 hover:bg-gray-100 text-black rounded-full border border-gray-300 hover:border-gray-400">
-  <Sun className="w-5 h-5" />
-</button>
   <button className="text-s font-semibold text-black hover:text-gray-700 border border-gray-300 px-6 py-2 rounded-full hover:border-gray-400">
     Signin
   </button>
@@ -152,7 +154,6 @@ export default function TravilaWebsite() {
     </svg>
   </button>
 </div>
-
               {/* Mobile Menu Button*/}
               <button 
                 className="md:hidden p-2 text-black ml-auto"
@@ -200,30 +201,30 @@ export default function TravilaWebsite() {
           </div>
         </header>
 {/* Search Section */}
-<div className="bg-gray-50 py-8 border-b">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="bg-white py-4 border-b pr-20">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Search Bar with Integrated Buttons */}
-    <div className="bg-white rounded-full shadow-sm flex items-stretch mb-6 overflow-hidden">
+    <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden">
       {/* Search Input - Gray Background - Takes more space */}
-      <div className="flex-[2] flex items-center gap-3 bg-gray-200 px-6">
-        <Search className="w-5 h-5 text-gray-400 shrink-0" />
+      <div className="flex-2 flex items-center gap-2 px-4 mr-2" style={{backgroundColor: '#F2F4F6'}}>
+        <Search className="w-3.5 h-3.5 text-black shrink-0" />
         <input
           type="text"
           placeholder="What are you looking for?"
-          className="flex-1 outline-none text-gray-900 text-bold text-base bg-transparent py-4"
+          className="flex-1 outline-none text-gray-900 text-xs bg-transparent py-2 placeholder:text-[#737373]"
         />
       </div>
       
       {/* Filter Buttons - White Background */}
-      <div className="flex items-center gap-2 px-4 bg-white">
+      <div className="flex items-center gap-2 px-2 bg-white">
         {filterButtons.map((filter) => (
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`px-6 py-2.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+            className={`px-3 py-1 rounded-full text-xs font-medium transition whitespace-nowrap ${
               activeFilter === filter
                 ? 'bg-black text-white'
-                : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                : 'bg-transparent text-gray-700'
             }`}
           >
             {filter === 'Hotels' ? (
@@ -240,22 +241,30 @@ export default function TravilaWebsite() {
     </div>
 
     {/* Filters Row */}
-    <div className="flex items-center justify-between gap-4">
-      <div className="flex items-center gap-3 overflow-x-auto pb-2 sm:pb-0 hide-scrollbar flex-1">
+    <div className="flex items-center justify-between ">
+      <div className="flex items-center gap-1 overflow-x-auto pb-2 sm:pb-0 hide-scrollbar flex-1">
         {['Categories', 'Duration', 'Review / Rating', 'Price range', 'Language'].map((filter) => (
           <button
             key={filter}
-            className="px-5 py-2.5 bg-gray-300 rounded-full text-sm font-medium text-gray-700 flex items-center space-x-2 border border-gray-200 whitespace-nowrap shrink-0"
+            className="px-3 py-2 rounded-full text-sm font-medium text-black flex items-center space-x-2 border border-gray-200 whitespace-nowrap shrink-0"
+            style={{backgroundColor: '#E4E6E8'}}
           >
             <span>{filter}</span>
             <ChevronDown className="w-4 h-4" />
           </button>
         ))}
       </div>
-      <div className="hidden lg:flex items-center space-x-2 text-sm text-gray-600 whitespace-nowrap">
-        <span>Sort from High to Low</span>
-        <ChevronDown className="w-4 h-4" />
-      </div>
+  <div className="hidden lg:flex items-center gap-2 border border-gray-300 rounded-full px-6 py-3 text-[14px] font-medium leading-[22px] tracking-[0%] whitespace-nowrap" style={{font: 'Manrope', color: '#000000'}}>
+  <span>Sort from High to Low</span>
+  <div className="flex items-center gap-0.5">
+    <svg className="w-5 h-5" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 9V3M6 3L3 6M6 3l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+    <svg className="w-5 h-5" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 3v6M6 9l3-3M6 9L3 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  </div>
+</div>
     </div>
   </div>
 </div>
@@ -263,11 +272,11 @@ export default function TravilaWebsite() {
 <div className="w-full px-4 sm:px-6 lg:px-8">
   {/* Hero Title */}
   <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4">
-  <div className="pl-30">
+  <div className="pl-50">
     <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight">
       Your Journey, Your Way
     </h1>
-    <p className="text-gray-500 text-base sm:text-lg lg:text-xl">
+    <p className="text-base sm:text-lg lg:text-xl" style={{color: '#8E8E8E'}}>
       Discover the World's Treasures with Travila
     </p>
   </div>
@@ -285,74 +294,92 @@ export default function TravilaWebsite() {
 <div className="w-full">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
     {tours.map((tour) => (
-      <div key={tour.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
-        <div className="relative h-64 overflow-hidden">
+      <div key={tour.id} className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden" style={{
+        borderRadius: '24px'
+      }}>
+        <div className="relative h-64" style={{
+          borderTopLeftRadius: '24px',
+          borderTopRightRadius: '24px'
+        }}>
           <img
             src={tour.image}
             alt={tour.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            className="w-full h-full object-cover"
           />
-          <button className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition">
+          
+          <button className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition z-20">
             <Heart className="w-5 h-5 text-gray-700" />
           </button>
-          {tour.badge && (
-            <div className="absolute bottom-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-md text-xs font-bold flex items-center space-x-1">
-              <span>⚡</span>
-              <span>{tour.badge}</span>
-            </div>
-          )}
-          <div className="absolute bottom-4 right-4 bg-white px-3 py-1 rounded-md flex items-center space-x-1 shadow-md">
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-bold text-black">{tour.rating}</span>
-            {tour.reviews > 0 && (
-              <span className="text-xs text-gray-500">({tour.reviews} reviews)</span>
+          
+          {/* Curved white overlay at bottom of image */}
+          <div className="absolute bottom-0 left-0 right-0 h-6 bg-white" style={{
+            borderTopLeftRadius: '24px',
+            borderTopRightRadius: '24px'
+          }}></div>
+          
+          {/* Exceptional badge and Reviews on the separation line */}
+          <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center px-4 pb-2 z-20">
+            {tour.badge ? (
+              <div className="bg-yellow-400 text-black px-3 py-2 rounded-full text-xs font-bold flex items-center space-x-1 shadow-lg">
+                <span>⚡</span>
+                <span>{tour.badge}</span>
+              </div>
+            ) : (
+              <div></div>
             )}
+            <div className="bg-white px-4 py-2 rounded-full flex items-center space-x-1 shadow-lg">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-sm font-bold text-black">{tour.rating}</span>
+              {tour.reviews > 0 && (
+                <span className="text-xs text-gray-500">({tour.reviews} reviews)</span>
+              )}
+            </div>
           </div>
         </div>
 
-<div className="p-5">
-  <h3 className="font-bold text-black text-lg mb-2 line-clamp-2 leading-snug">{tour.title}</h3>
-  <div className="flex items-center text-sm text-gray-500 mb-4">
-    <span>{tour.duration}</span>
-    <span className="mx-2">·</span>
-    <span>{tour.groupSize}</span>
-  </div>
-  
-  <div className="flex items-center justify-between gap-4">
-    <div className="flex items-baseline gap-1 whitespace-nowrap">
-      <span className="text-2xl text-black font-bold">${tour.price}</span>
-      <span className="text-gray-500 text-sm">/ person</span>
-    </div>
-    
-    {tour.promotion ? (
-      <div className="shrink-0">
-        <p className="text-xs text-gray-500 mb-1 text-left">Promotion will end in</p>
-        <div className="flex items-start gap-1.5">
-          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
-            <div className="text-base text-black font-bold leading-tight">{countdown.days}</div>
-            <div className="text-[10px] text-gray-500 mt-0.5">Days</div>
+        <div className="p-5 bg-white pt-4">
+          <h3 className="font-bold text-black text-lg mb-2 line-clamp-2 leading-snug">{tour.title}</h3>
+          <div className="flex items-center text-sm text-gray-500 mb-4">
+            <span>{tour.duration}</span>
+            <span className="mx-2">·</span>
+            <span>{tour.groupSize}</span>
           </div>
-          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
-            <div className="text-base text-black font-bold leading-tight">{countdown.hours}</div>
-            <div className="text-[10px] text-gray-500 mt-0.5">Hours</div>
-          </div>
-          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
-            <div className="text-base text-black font-bold leading-tight">{countdown.mins}</div>
-            <div className="text-[10px] text-gray-500 mt-0.5">Mins</div>
-          </div>
-          <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
-            <div className="text-base text-black font-bold leading-tight">{countdown.secs}</div>
-            <div className="text-[10px] text-gray-500 mt-0.5">Secs</div>
+          
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-baseline gap-1 whitespace-nowrap">
+              <span className="text-2xl text-black font-bold">${tour.price}</span>
+              <span className="text-gray-500 text-sm">/ person</span>
+            </div>
+            
+            {tour.promotion ? (
+              <div className="shrink-0">
+                <p className="text-xs text-gray-500 mb-1 text-left">Promotion will end in</p>
+                <div className="flex items-start gap-1.5">
+                  <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+                    <div className="text-base text-black font-bold leading-tight">{countdown.days}</div>
+                    <div className="text-[10px] text-gray-500 mt-0.5">Days</div>
+                  </div>
+                  <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+                    <div className="text-base text-black font-bold leading-tight">{countdown.hours}</div>
+                    <div className="text-[10px] text-gray-500 mt-0.5">Hours</div>
+                  </div>
+                  <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+                    <div className="text-base text-black font-bold leading-tight">{countdown.mins}</div>
+                    <div className="text-[10px] text-gray-500 mt-0.5">Mins</div>
+                  </div>
+                  <div className="text-center bg-gray-100 rounded-lg px-2 py-1.5 min-w-6">
+                    <div className="text-base text-black font-bold leading-tight">{countdown.secs}</div>
+                    <div className="text-[10px] text-gray-500 mt-0.5">Secs</div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <button className="px-6 py-2 bg-gray-200 text-black text-sm font-semibold rounded-lg hover:bg-gray-300 transition flex-shrink-0">
+                Book Now
+              </button>
+            )}
           </div>
         </div>
-      </div>
-    ) : (
-      <button className="px-6 py-2 bg-gray-200 text-black text-sm font-semibold rounded-lg hover:bg-gray-300 transition flex-shrink-0">
-        Book Now
-      </button>
-    )}
-  </div>
-</div>
       </div>
     ))}
   </div>
