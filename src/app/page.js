@@ -108,7 +108,7 @@ export default function TravilaWebsite() {
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
-                    className="text-xs font-medium text-black hover:text-black flex items-center gap-1"
+                    className="text-xs text-black hover:text-black flex items-center gap-1"
                   >
                     <span>{item}</span>
                     {item !== 'Contact' && <ChevronDown className="w-3 h-3 mt-0.5" />}
