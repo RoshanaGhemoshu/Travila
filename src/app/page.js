@@ -201,7 +201,7 @@ export default function TravilaWebsite() {
           </div>
         </header>
 {/* Search Section */}
-<div className="bg-white py-4 border-b pr-20 mt-5">
+<div className="bg-white py-4 border-b pr-60 mt-5">
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Search Bar with Integrated Buttons */}
     <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden">
