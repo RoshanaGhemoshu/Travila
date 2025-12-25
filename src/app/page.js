@@ -202,7 +202,7 @@ export default function TravilaWebsite() {
         </header>
 {/* Search Section */}
 <div className="bg-white py-4 border-b mt-5">
-  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pr-60">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pr-65">
     {/* Search Bar with Integrated Buttons */}
     <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden">
       {/* Search Input - Gray Background - Takes more space */}
@@ -272,7 +272,7 @@ export default function TravilaWebsite() {
 <div className="w-full px-4 sm:px-6 lg:px-8">
   {/* Hero Title */}
   <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 pl-80 mt-10">
-  <div className="pl-50">
+  <div >
     <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight">
       Your Journey, Your Way
     </h1>
