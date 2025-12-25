@@ -1056,7 +1056,7 @@ export default function TravilaWebsite() {
     </div>
 
 {/* Blog Cards */}
-<div className="grid grid-cols-1 text-black md:grid-cols-3 gap-8 pl-20 mr-90 ">
+<div className="grid grid-cols-1 text-black md:grid-cols-3 gap-8 pl-30 mr-110 ">
   {[
     {
       category: 'Cultural',
