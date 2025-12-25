@@ -101,14 +101,14 @@ export default function TravilaWebsite() {
       className="w-9 h-10 object-contain"
     />
   </div>
-  <span className="text-black text-xl font-bold">Travila</span>
+  <span className="text-black text-2xl font-bold">Travila</span>
 </div>
 {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 pl-9">
+              <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 pl-20">
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
-                    className="text-s font-medium text-black hover:text-black flex items-center gap-1"
+                    className="text-xl font-medium text-black hover:text-black flex items-center gap-1"
                   >
                     <span>{item}</span>
                     {item !== 'Contact' && <ChevronDown className="w-3 h-3 mt-0.5" />}
@@ -116,7 +116,7 @@ export default function TravilaWebsite() {
                 ))}
               </nav>
              <div className="hidden md:flex items-center space-x-3 ml-auto pl-20">
-  <div className="flex items-center -space-x-3 ">
+  <div className="flex items-center -space-x-3">
     <button className="flex items-center text-black text-s px-3 py-2 rounded-lg transition">
       <Globe className="w-5 h-5" />
       <span>EN</span>
@@ -204,19 +204,19 @@ export default function TravilaWebsite() {
 <div className="bg-white py-4 border-b pr-20 mt-5">
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Search Bar with Integrated Buttons */}
-    <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden h-20">
+    <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden">
       {/* Search Input - Gray Background - Takes more space */}
       <div className="flex-2 flex items-center gap-2 px-4 mr-2" style={{backgroundColor: '#F2F4F6'}}>
         <Search className="w-3.5 h-4 text-black shrink-0" />
         <input
           type="text"
           placeholder="What are you looking for?"
-          className="flex-1 outline-none text-gray-900 text-xl bg-transparent py-3 placeholder:text-[#737373]"
+          className="flex-1 outline-none text-gray-900 text-s bg-transparent py-2 placeholder:text-[#737373]"
         />
       </div>
       
       {/* Filter Buttons - White Background */}
-      <div className="flex items-center gap-3 px-2 bg-white">
+      <div className="flex items-center gap-2 px-2 bg-white">
         {filterButtons.map((filter) => (
           <button
             key={filter}
@@ -242,7 +242,7 @@ export default function TravilaWebsite() {
 
     {/* Filters Row */}
     <div className="flex items-center justify-between ">
-      <div className="flex items-center gap-1 overflow-x-auto pb-2 sm:pb-0 hide-scrollbar flex-1 mt-2">
+      <div className="flex items-center gap-1 overflow-x-auto pb-2 sm:pb-0 hide-scrollbar flex-1">
         {['Categories', 'Duration', 'Review / Rating', 'Price range', 'Language'].map((filter) => (
           <button
             key={filter}
@@ -271,7 +271,7 @@ export default function TravilaWebsite() {
 {/* Main Content */}
 <div className="w-full px-4 sm:px-6 lg:px-8">
   {/* Hero Title */}
-  <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 pl-40 mt-10">
+  <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 pl-80 mt-10">
   <div className="pl-50">
     <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight">
       Your Journey, Your Way
