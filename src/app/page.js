@@ -966,7 +966,7 @@ export default function TravilaWebsite() {
           <span className="text-sm font-semibold text-black">+100 testimonials</span>
         </div>
 
-        <h2 className="text-2xl text-black font-bold mb-4 leading-tight">
+        <h2 className="text-2xl text-black mb-4 leading-tight">
           What our clients are saying about us?
         </h2>
         <p className=" text-base leading-relaxed max-w-lg" style={{color: '#737373'}}>
