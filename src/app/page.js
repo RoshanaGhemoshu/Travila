@@ -909,7 +909,7 @@ export default function TravilaWebsite() {
 {/* Testimonials Section */}
 <div className="bg-blue-50 py-20 relative overflow-hidden">
   {/* Decorative Dashed Line at Top */}
-  <div className="absolute top-0 left-1/4 w-96 h-32 pl-30">
+  <div className="absolute top-0 left-1/4 w-96 h-32">
     <svg className="w-full h-full" viewBox="0 0 400 150">
       <path 
         d="M 50,100 Q 100,50 150,80 Q 200,110 250,70 Q 300,30 350,60" 
