@@ -1157,7 +1157,7 @@ export default function TravilaWebsite() {
 </div>
 {/* Newsletter Section */}
 <div className="bg-white py-20 -mt-15">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="bg-blue-100 h-110 rounded-4xl p-16">
       <div className="max-w-xl">
         <div className="inline-block bg-yellow-300 text-black px-5 py-2 rounded-full text-sm font-bold mb-6">
