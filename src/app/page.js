@@ -271,12 +271,12 @@ export default function TravilaWebsite() {
 {/* Main Content */}
 <div className="w-full px-4 sm:px-6 lg:px-8">
   {/* Hero Title */}
-  <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 mt-10 pr-65">
+  <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 mt-10">
   <div classname="pr-65">
-    <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight pr-65">
+    <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight">
       Your Journey, Your Way
     </h1>
-    <p className="text-base sm:text-lg lg:text-xl pr-65" style={{color: '#8E8E8E'}}>
+    <p className="text-base sm:text-lg lg:text-xl" style={{color: '#8E8E8E'}}>
       Discover the World's Treasures with Travila
     </p>
   </div>
