@@ -101,14 +101,14 @@ export default function TravilaWebsite() {
       className="w-9 h-10 object-contain"
     />
   </div>
-  <span className="text-black text-2xl font-bold">Travila</span>
+  <span className="text-black text-xl font-bold">Travila</span>
 </div>
 {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 pl-9">
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
-                    className="text-xl font-medium text-black hover:text-black flex items-center gap-1"
+                    className="text-s font-medium text-black hover:text-black flex items-center gap-1"
                   >
                     <span>{item}</span>
                     {item !== 'Contact' && <ChevronDown className="w-3 h-3 mt-0.5" />}
@@ -117,12 +117,12 @@ export default function TravilaWebsite() {
               </nav>
              <div className="hidden md:flex items-center space-x-3 ml-auto pl-20">
   <div className="flex items-center -space-x-3 ">
-    <button className="flex items-center text-black text-xl px-3 py-2 rounded-lg transition">
+    <button className="flex items-center text-black text-s px-3 py-2 rounded-lg transition">
       <Globe className="w-5 h-5" />
       <span>EN</span>
       <ChevronDown className="w-3 h-3" />
     </button>
-    <button className="flex items-center text-black text-xl px-3 py-2 rounded-lg transition">
+    <button className="flex items-center text-black text-s px-3 py-2 rounded-lg transition">
       <span>USD</span>
       <ChevronDown className="w-3 h-3" />
     </button>
@@ -130,7 +130,7 @@ export default function TravilaWebsite() {
   <button className="px-3 py-2 bg-gray-100 hover:bg-gray-100 text-black rounded-full border border-gray-300 hover:border-gray-400">
     <Sun className="w-5 h-5" />
   </button>
-  <button className="text-xl font-semibold text-black hover:text-gray-700 border border-gray-300 px-6 py-2 rounded-full hover:border-gray-400">
+  <button className="text-s font-semibold text-black hover:text-gray-700 border border-gray-300 px-6 py-2 rounded-full hover:border-gray-400">
     Signin
   </button>
   <button className="bg-yellow-200 hover:bg-yellow-200 p-2.5 rounded-lg transition">
@@ -202,7 +202,7 @@ export default function TravilaWebsite() {
         </header>
 {/* Search Section */}
 <div className="bg-white py-4 border-b pr-20 mt-5">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Search Bar with Integrated Buttons */}
     <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden h-20">
       {/* Search Input - Gray Background - Takes more space */}
