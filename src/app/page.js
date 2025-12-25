@@ -940,7 +940,7 @@ export default function TravilaWebsite() {
       <div className="lg:col-span-2 pl-95">
         {/* Client Avatars */}
         <div className="flex items-center space-x-3 mb-6">
-          <div className="flex items-center pl-20">
+          <div className="flex items-center pl-50">
             <div className="w-10 h-10 bg-white rounded-full border-2 border-white shadow-sm overflow-hidden">
               <img
                 src="/images/client1.jpeg"
