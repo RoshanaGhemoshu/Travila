@@ -1046,7 +1046,7 @@ export default function TravilaWebsite() {
   <div className="w-full px-4 sm:px-6 lg:px-8">
     <div className="flex items-center justify-between mb-12 pl-30">
       <div>
-        <h2 className="text-5xl text-black font-bold mb-2">News, Tips & Guides</h2>
+        <h2 className="text-6xl text-black font-bold mb-2">News, Tips & Guides</h2>
         <p className="text-gray-400">Favorite destinations based on customer reviews</p>
       </div>
       <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition flex items-center gap-2 mr-105">
@@ -1157,7 +1157,7 @@ export default function TravilaWebsite() {
 </div>
 {/* Newsletter Section */}
 <div className="bg-white py-20 -mt-15">
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="bg-blue-100 h-110 rounded-4xl p-16">
       <div className="max-w-xl">
         <div className="inline-block bg-yellow-300 text-black px-5 py-2 rounded-full text-sm font-bold mb-6">
