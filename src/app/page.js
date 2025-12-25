@@ -272,7 +272,7 @@ export default function TravilaWebsite() {
 <div className="w-full px-4 sm:px-6 lg:px-8">
   {/* Hero Title */}
   <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 mt-10">
-  <div >
+  <div classname="pr-65">
     <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight pr-65">
       Your Journey, Your Way
     </h1>
