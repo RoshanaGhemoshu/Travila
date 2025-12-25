@@ -6,7 +6,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="w-full px-4 sm:px-6 lg:px-8 py-12 ">
         {/* Top Section */}
-        <div className="flex items-center justify-between mb-16 pb-12 border-b border-gray-800 pl-110">
+        <div className="flex items-center justify-between mb-16 pb-12 border-b border-gray-800 pl-50">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
               <img 
@@ -18,7 +18,7 @@ export default function Footer() {
             <span className="text-2xl font-bold">Travila</span>
           </div>
           
-          <div className="flex items-center space-x-2 mr-110">
+          <div className="flex items-center space-x-2 mr-60">
             <span className="text-gray-400 text-sm">📞 Need help? Call us</span>
             <a href="tel:1-800-222-8888" className="text-yellow-400 text-2xl font-bold hover:text-yellow-500">
               1-800-222-8888
