@@ -105,7 +105,7 @@ export default function TravilaWebsite() {
   <span className="text-black text-xl font-bold">Travila</span>
 </div>
 {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 style={{paddingLeft: '20px'}}">
+              <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 style={{paddingLeft: '15px'}}">
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
