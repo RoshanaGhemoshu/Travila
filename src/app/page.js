@@ -102,7 +102,7 @@ export default function TravilaWebsite() {
       className="w-9 h-10 object-contain"
     />
   </div>
-  <span className="text-black text-2xl font-bold">Travila</span>
+  <span className="text-black text-xl font-bold">Travila</span>
 </div>
 {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 style={{paddingLeft: '20px'}}">
