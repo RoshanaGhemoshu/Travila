@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'; 
 import { Search, ChevronDown, Heart, Star, Globe, DollarSign, Sun, Grid, Sparkles, Menu, X } from 'lucide-react';
 import Footer from "@/components/Footer";
+import './globals.css';
 
 export default function TravilaWebsite() {
   
