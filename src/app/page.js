@@ -247,7 +247,7 @@ export default function TravilaWebsite() {
         {['Categories', 'Duration', 'Review / Rating', 'Price range', 'Language'].map((filter) => (
           <button
             key={filter}
-            className="px-3 py-2 rounded-full text-s font-medium text-black flex items-center space-x-2 border border-gray-200 whitespace-nowrap shrink-0"
+            className="px-3 py-2 rounded-full text-xs font-medium text-black flex items-center space-x-2 border border-gray-200 whitespace-nowrap shrink-0"
             style={{backgroundColor: '#E4E6E8'}}
           >
             <span>{filter}</span>
