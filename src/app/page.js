@@ -105,7 +105,7 @@ export default function TravilaWebsite() {
   <span className="text-black text-2xl font-bold">Travila</span>
 </div>
 {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 pl-20">
+              <nav className="hidden lg:flex items-center space-x-5 flex-1 justify-center  pr-1 style={{paddingLeft: '20px'}}">
                 {['Home', 'Tours', 'Destinations', 'Activities', 'Hotel', 'Rental', 'Tickets', 'Pages', 'Blog', 'Contact'].map((item) => (
                   <button
                     key={item}
@@ -203,7 +203,7 @@ export default function TravilaWebsite() {
         </header>
 {/* Search Section */}
 <div className="bg-white py-4 border-b mt-5">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Search Bar with Integrated Buttons */}
     <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden">
       {/* Search Input - Gray Background - Takes more space */}
