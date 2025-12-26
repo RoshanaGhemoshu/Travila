@@ -274,7 +274,7 @@ export default function TravilaWebsite() {
   {/* Hero Title */}
   <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 mt-10 ">
   <div>
-    <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight" style={{paddingLeft: '150px'}} >
+    <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight" style={{paddingLeft: '50px'}} >
       Your Journey, Your Way
     </h1>
     <p className="text-base sm:text-lg lg:text-xl" style={{color: '#8E8E8E'}}>
