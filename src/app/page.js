@@ -1046,7 +1046,7 @@ export default function TravilaWebsite() {
   <div className="w-full px-4 sm:px-6 lg:px-8">
     <div className="flex items-center justify-between mb-12 pl-30">
       <div>
-        <h2 className="text-5xl text-black font-bold mb-2">News, Tips & Guides</h2>
+        <h2 className="text-6xl text-black font-bold mb-2">News, Tips & Guides</h2>
         <p className="text-gray-400">Favorite destinations based on customer reviews</p>
       </div>
       <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition flex items-center gap-2 mr-105">
@@ -1056,7 +1056,7 @@ export default function TravilaWebsite() {
     </div>
 
 {/* Blog Cards */}
-<div className="grid grid-cols-1 text-black md:grid-cols-3 gap-8 pl-30 mr-110 ">
+<div className="grid grid-cols-1 text-black md:grid-cols-3 gap-8 pl-30 mr-100 ">
   {[
     {
       category: 'Cultural',
