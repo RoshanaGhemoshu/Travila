@@ -935,12 +935,12 @@ export default function TravilaWebsite() {
   </div>
 
   <div className="w-full px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 pr-30">
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 ">
       {/* Left Column - Text Content (Takes 2 columns) */}
       <div className="lg:col-span-2 pr-50">
         {/* Client Avatars */}
         <div className="flex items-center space-x-3 mb-6">
-          <div className="flex items-center pr-30">
+          <div className="flex items-center">
             <div className="w-10 h-10 bg-white rounded-full border-2 border-white shadow-sm overflow-hidden">
               <img
                 src="/images/client1.jpeg"
