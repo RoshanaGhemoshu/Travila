@@ -79,10 +79,10 @@ export default function TravilaWebsite() {
       <div className="bg-black text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-center space-x-2">
           <Sparkles className="w-4 h-4" />
-          <span className="text-[14px] leading-[22px] tracking-[0%]" style={{font: 'Manrope'}}>
+          <span className="text-[14px] leading-[22px] tracking-[0%]" style={{fontFamily: 'Manrope'}}>
             Unlock the Magic of Travel with Travila - Your Gateway to Extraordinary Experiences
           </span>
-          <button className="ml-4 flex items-center space-x-1 text-[14px] font-normal leading-[24px] tracking-[0%]" style={{font: 'Manrope', color: '#F09814'}}>
+          <button className="ml-4 flex items-center space-x-1 text-[14px] font-normal leading-[24px] tracking-[0%]" style={{fontFamily: 'Manrope', color: '#F09814'}}>
             <span>Get This Now</span>
             <span className="text-white mt-0.5">🡢</span>
           </button>
@@ -203,7 +203,7 @@ export default function TravilaWebsite() {
         </header>
 {/* Search Section */}
 <div className="bg-white py-4 border-b mt-5">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pr-65">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Search Bar with Integrated Buttons */}
     <div className="bg-white rounded-full border border-gray-300 flex items-stretch mb-3 overflow-hidden">
       {/* Search Input - Gray Background - Takes more space */}
@@ -255,7 +255,7 @@ export default function TravilaWebsite() {
           </button>
         ))}
       </div>
-  <div className="hidden lg:flex items-center gap-2 border border-gray-300 rounded-full px-6 py-3 text-[14px] font-medium leading-[22px] tracking-[0%] whitespace-nowrap" style={{font: 'Manrope', color: '#000000'}}>
+  <div className="hidden lg:flex items-center gap-2 border border-gray-300 rounded-full px-6 py-3 text-[14px] font-medium leading-[22px] tracking-[0%] whitespace-nowrap" style={{fontFamily: 'Manrope', color: '#000000'}}>
   <span>Sort from High to Low</span>
   <div className="flex items-center gap-0.5">
     <svg className="w-5 h-5" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,9 +272,9 @@ export default function TravilaWebsite() {
 {/* Main Content */}
 <div className="w-full px-4 sm:px-6 lg:px-8">
   {/* Hero Title */}
-  <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 pl-110 mt-10">
+  <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start justify-between gap-4 mt-10 ">
   <div>
-    <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight ">
+    <h1 className="text-3xl sm:text-5xl lg:text-6xl text-black font-bold mb-3 leading-tight style={{paddingLeft: '110px'}} ">
       Your Journey, Your Way
     </h1>
     <p className="text-base sm:text-lg lg:text-xl" style={{color: '#8E8E8E'}}>
@@ -387,7 +387,7 @@ export default function TravilaWebsite() {
 </div>
 </div>
        {/* Popular Destinations Section */}
-      <div className="bg-white py-15 border-t ">
+      <div className="bg-white py-20 border-t ">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-6">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -491,7 +491,7 @@ export default function TravilaWebsite() {
               <h2 className="text-5xl text-black font-bold mb-3">Top Rated Hotels</h2>
               <p className="text-gray-400 text-lg">Quality as judged by customers. Book at the ideal price!</p>
             </div>
-            <div style={{marginLeft: '-20px'}}>
+            <div>
   <button className="mt-8 bg-black text-white px-8 py-3 text-s  transition flex items-center space-x-2" style={{borderRadius: '50px', transform: 'translateX(-300px)'}}>
   <span>View More</span>
   <span>🡢</span>
@@ -605,18 +605,18 @@ export default function TravilaWebsite() {
         </div>
       </div>
       {/* Why Choose Us Section */}
-      <div className="style={{backgroundcolor: '#E4E6E8'}} py-30 ">
+      <div className="py-30 style={{backgroundcolor: '#E4E6E8'}}">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="-mt-25">
+            <div style={{marginTop: '-100px'}}>
               <p className="text-xs font-semibold text-black mb-3 inline-block px-4 py-2" style={{backgroundColor: '#F2F4F6', borderRadius: '50px'}}>Why Choose Us</p>
               <h2 className="text-5xl text-black font-bold mb-6 leading-tight">
                 Dare to live the lift you've always wanted
               </h2>
               <p className="mb-8" style={{
                 color: '#737373',
-                font: 'Manrope',
+                fontFamily: 'Manrope',
                 fontWeight: 500,
                 fontSize: '20px',
                 lineHeight: '32px',
@@ -947,7 +947,7 @@ export default function TravilaWebsite() {
   <div className="w-full px-4 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 items-start">
       {/* Left Column - Text Content (Takes 2 columns) */}
-      <div className="lg:col-span-2 pl-95">
+      <div className="lg:col-span-2" style={{paddingLeft: '95px'}}>
         {/* Client Avatars */}
         <div className="flex items-center space-x-3 mb-6">
           <div className="flex items-center">
@@ -986,7 +986,7 @@ export default function TravilaWebsite() {
 
       {/* Right Column - Testimonial Cards Side by Side (Takes 3 columns) */}
       <div className="lg:col-span-3">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 pl-30">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6" style={{paddingLeft: '30px'}}>
           {/* Card 1 */}
           <div className="bg-white rounded-3xl p-10 shadow-md">
             <div className="flex items-center space-x-3 mb-4">
@@ -1039,7 +1039,7 @@ export default function TravilaWebsite() {
         </div>
 
         {/* Navigation Arrows */}
-        <div className="flex items-center justify-center space-x-3 pr-200 mt-20">
+        <div className="flex items-center justify-center space-x-3 mt-20" style={{paddingRight: '200px'}}>
   <button className="w-10 h-10 rounded-full bg-gray-200 shadow-md flex items-center justify-center ">
     <span className="text-lg text-gray-700">🡠</span>
   </button>
@@ -1052,21 +1052,21 @@ export default function TravilaWebsite() {
   </div>
 </div>
      {/* News, Tips & Guides Section */}
-<div className="bg-white py-20 pl-60">
+<div className="bg-white py-20" style={{paddingLeft: '60px'}}>
   <div className="w-full px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-between mb-12 pl-30">
+    <div className="flex items-center justify-between mb-12" style={{paddingLeft: '30px'}}>
       <div>
         <h2 className="text-6xl text-black font-bold mb-2">News, Tips & Guides</h2>
         <p className="text-gray-400">Favorite destinations based on customer reviews</p>
       </div>
-      <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition flex items-center gap-2 mr-105">
+      <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-800 transition flex items-center gap-2" style={{marginRight: '105px'}}>
         <span>View More</span>
         <span>🡢</span>
       </button>
     </div>
 
 {/* Blog Cards */}
-<div className="grid grid-cols-1 text-black md:grid-cols-3 gap-8 pl-30 mr-100 ">
+<div className="grid grid-cols-1 text-black md:grid-cols-3 gap-8" style={{paddingLeft: '30px', marginRight: '100px'}}>
   {[
     {
       category: 'Cultural',
@@ -1166,7 +1166,7 @@ export default function TravilaWebsite() {
 </div>
 </div>
 {/* Newsletter Section */}
-<div className="bg-white py-20 -mt-15">
+<div className="bg-white py-20" style={{marginTop: '-15px'}}>
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="bg-blue-100 h-110 rounded-4xl p-16">
       <div className="max-w-xl">
