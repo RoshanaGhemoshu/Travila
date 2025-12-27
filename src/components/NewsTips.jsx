@@ -1,5 +1,6 @@
 "use client";
 import { Heart } from 'lucide-react';
+import './globals.css';
 
 export default function NewsTips() {
   return (
@@ -117,4 +118,5 @@ export default function NewsTips() {
       </div>
     </div>
   );
+
 }
