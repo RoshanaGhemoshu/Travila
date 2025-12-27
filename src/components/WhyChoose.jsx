@@ -1,4 +1,5 @@
 "use client";
+import './globals.css';
 
 export default function WhyChoose() {
   return (
@@ -78,4 +79,5 @@ export default function WhyChoose() {
       </div>
     </div>
   );
+
 }
