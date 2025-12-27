@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ChevronDown, Globe, Sun, Grid, Menu, X, Search, Sparkles } from 'lucide-react';
+import './globals.css';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -210,4 +211,5 @@ export default function Header() {
       </div>
     </>
   );
+
 }
